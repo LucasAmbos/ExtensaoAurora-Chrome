@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --cor1-aside: #02c39a;
+  --input-cor: #fff;
+  --cor-preto: 0,0,0;
+  --blur: blur(7px);
+}
+
+body {
+  background-image: url("logo/dia.png");
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  font-family: "Quicksand", sans-serif;
+  transition: 0.5s;
+  color: var(--input-cor);
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 2.5vw;
+  padding-top: 15px;
+  z-index: 10;
+}
+
+nav #atalhos {
+  display: flex;
+  float: right;
+  gap: 2vw;
+  padding-right: 2vw;
+}
+
+nav p {
+  font-size: 1.5rem;
+}
+
+nav #atalhos img {
+  width: 35px;
+  cursor: pointer;
+  transition: 0.4s;
+  filter: invert(100%);
+}
+
+nav #atalhos img:hover, p:hover {
+  filter: invert(0);
+}
+
+nav #atalhos #img-config:hover {
+  transform: rotate(20deg);
+}
+
+nav #atalhos #img-atalhos:hover {
+  transform: scale(1.1);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+#cont-inicial {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+#content p {
+  margin-top: 3vh;
+}
+
+#content p:nth-child(1) {
+  margin-bottom: -4vh;
+  font-size: 5rem;
+}
+
+#content p:nth-child(2) {
+  font-size: 1.5rem;
+}
+
+#content #saudacao {
+  margin-bottom: 3vh;
+}
+
+#content #tempo {
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(var(--input-cor));
+}
+
+#credit {
+  position: absolute;
+  left: 3%;
+  bottom: 7%;
+  font-size: 1.2rem;
+}
+
+aside {
+  position: absolute;
+  transition: 1s;
+  right: -17vw;
+  margin-top: 7vh;
+  width: 15vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+aside .config {
+  gap: 2vh 0;
+  margin-top: 6vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: rgba(var(--cor-preto), 0.8);
+  -webkit-backdrop-filter: var(--blur);
+          backdrop-filter: var(--blur);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1.1rem;
+  color: var(--cor1-aside);
+}
+
+.input {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--input-cor);
+  padding: 6.5px;
+  margin: 15px 0;
+  color: var(--input-cor);
+}
+
+button {
+  width: 100px;
+  padding: 9px 3px;
+  background: var(--cor1-aside);
+  border-radius: 7px;
+  border: none;
+}
+
+aside div:nth-child(2) label {
+  margin-bottom: 60px;
+}
+
+#backgroundCheckbox {
+  position: absolute;
+  bottom: 20%;
+}
+
+input[type=checkbox] {
+  position: relative;
+  width: 70px;
+  height: 25px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #04395e;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+input:checked[type=checkbox] {
+  background-color: var(--cor1-aside);
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -5px;
+  left: 0%;
+  background-color: var(--input-cor);
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+input:checked[type=checkbox]::before {
+  left: 40px;
+} 
+aside div:nth-child(3) select {
+  background: none;
+  color: rgb(var(--input-cor));
+  font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+option {
+  padding: 20px;
+}
+
+aside div:nth-child(4) {
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 25px 0;
+  margin-top: 17vh;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+svg {
+  fill: var(--input-cor);
+  transform: scale(1.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+svg:hover {
+  fill: var(--cor1-aside);
+  transform: scale(1.3);
+}
+
+option {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
